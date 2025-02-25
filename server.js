@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const SERPER_API_KEY = process.env.SERPER_API_KEY;
+const OPENROUTER_KEY = process.env.OPENROUTER_KEY;
 const CLOUDFLARE_API_KEY = process.env.CLOUDFLARE_API_KEY;
 
 // Add feedback endpoint
