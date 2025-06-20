@@ -60,10 +60,10 @@ async function performTruthQuery() {
     let resultHTML = '';
     
     if (data.answer) {
+      // Insert raw HTML, not wrapped in <p>
       resultHTML = `
-        <div class="content-section">
-          <h3>Response Analysis</h3>
-          <p>${data.answer}</p>
+        <div class="truth-entry">
+          ${data.answer}
         </div>
       `;
 
@@ -97,4 +97,3 @@ async function performTruthQuery() {
     `;
   }
 }
- 
