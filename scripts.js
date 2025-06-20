@@ -60,10 +60,12 @@ async function performTruthQuery() {
     let resultHTML = '';
     
     if (data.answer) {
-      // Insert raw HTML, not wrapped in <p>
+      // Use marked to convert markdown to HTML
+      const answerHTML = marked.parse(data.answer);
+
       resultHTML = `
         <div class="truth-entry">
-          ${data.answer}
+          ${answerHTML}
         </div>
       `;
 
