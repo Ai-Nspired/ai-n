@@ -5,24 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ai-n • Truth-as-a-Service</title>
   <meta name="description" content="ai-n.org • Home of Truth-as-a-Service, micro-sites for justice, and ethical AI systems that remember.">
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       transform: scale(1.5);
       transform-origin: top left;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #111;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .header-subtitle {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .styled-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .styled-list li {
+      margin-bottom: 0.5em;
     }
 
     .styled-list li a {
+      margin-right: 0.5em;
       text-decoration: none;
-      color: inherit;
-      display: inline-block;
-      padding: 0.3em 0;
+      font-weight: bold;
     }
 
     .styled-list li a:hover {
-      text-decoration: underline;
       color: #3b82f6;
+    }
+
+    .search-button {
+      padding: 0.5em 1em;
+      font-size: 1rem;
+      background-color: #111;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    /* Modal (placeholder for future functionality) */
+    .modal-overlay {
+      display: none;
     }
   </style>
 </head>
@@ -43,32 +98,32 @@
       </section>
 
       <section class="highlight">
-        <h2>📡 <a href="?q=What+is+Truth-as-a-Service%3F">What is Truth-as-a-Service?</a></h2>
+        <h2>📡 What is Truth-as-a-Service?</h2>
         <p>Truth-as-a-Service (TaaS) is a new civic utility: AI-assisted systems that clarify, verify, and amplify truth — across justice, community, media, and memory.</p>
         <ul class="styled-list">
-          <li><a href="?q=What+is+contextual+AI%3F">🧠 Powered by contextual AI</a></li>
-          <li><a href="?q=What+are+testimony+records%3F">📄 Anchored by case law, records, lived testimony</a></li>
-          <li><a href="?q=What+is+cryptographic+timestamping%3F">🔒 Cryptographically timestamped & verified</a></li>
+          <li><a href="?q=What+is+contextual+AI%3F" title="Query this concept">🧠</a> Powered by contextual AI</li>
+          <li><a href="?q=What+are+testimony+records%3F" title="Query this concept">📄</a> Anchored by case law, records, lived testimony</li>
+          <li><a href="?q=What+is+cryptographic+timestamping%3F" title="Query this concept">🔒</a> Cryptographically timestamped & verified</li>
         </ul>
       </section>
 
       <section class="highlight">
-        <h2>🛰️ <a href="?q=What+are+micro-sites%3F">Micro-Sites = Decentralized Outreach</a></h2>
+        <h2>🛰️ Micro-Sites = Decentralized Outreach</h2>
         <p>Micro-sites are lightweight portals — designed to tell a story, solve a problem, or launch a movement. Each one is part of the greater ai-Nspired ecosystem.</p>
         <ul class="styled-list">
-          <li><a href="?q=What+is+legal+aid+in+AI+systems%3F">⚖️ Legal aid & case exposure</a></li>
-          <li><a href="?q=How+do+community+campaigns+use+AI%3F">📢 Community action campaigns</a></li>
-          <li><a href="?q=What+are+data-backed+claims%3F">📊 Data-backed claims & visualizations</a></li>
+          <li><a href="?q=What+is+legal+aid+in+AI+systems%3F" title="Query this concept">⚖️</a> Legal aid & case exposure</li>
+          <li><a href="?q=How+do+community+campaigns+use+AI%3F" title="Query this concept">📢</a> Community action campaigns</li>
+          <li><a href="?q=What+are+data-backed+claims%3F" title="Query this concept">📊</a> Data-backed claims & visualizations</li>
         </ul>
       </section>
 
       <section class="highlight">
-        <h2>🔥 <a href="?q=What+is+ai-Nspired%3F">What is ai-Nspired?</a></h2>
+        <h2>🔥 What is ai-Nspired?</h2>
         <p>ai-Nspired is more than a platform — it's a philosophy of systems that serve. We build tools, agents, and frameworks that enhance human potential, powered by:</p>
         <ul class="styled-list">
-          <li><a href="?q=What+is+Neural-Linguistic+Programming%3F">🧬 Neural-Linguistic Programming</a></li>
-          <li><a href="?q=What+is+Quantum+Pattern+Recognition%3F">🧿 Quantum Pattern Recognition</a></li>
-          <li><a href="?q=What+are+Ethical+Decision+Matrices%3F">⚖️ Ethical Decision Matrices</a></li>
+          <li><a href="?q=What+is+Neural-Linguistic+Programming%3F" title="Query this concept">🧬</a> Neural-Linguistic Programming</li>
+          <li><a href="?q=What+is+Quantum+Pattern+Recognition%3F" title="Query this concept">🧿</a> Quantum Pattern Recognition</li>
+          <li><a href="?q=What+are+Ethical+Decision+Matrices%3F" title="Query this concept">⚖️</a> Ethical Decision Matrices</li>
         </ul>
       </section>
     </main>
@@ -78,22 +133,10 @@
     </footer>
   </div>
 
-  <!-- Truth Engine Modal -->
-  <div class="modal-overlay" id="modal-overlay">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h2 class="modal-title">ai-N Truth Engine</h2>
-        <button class="close-modal" id="close-modal">×</button>
-      </div>
-      <div class="search-container">
-        <input type="text" class="search-input" id="queryInput" placeholder="Ask about justice, systems, or law..." aria-label="Truth Engine Search" />
-        <button class="search-button" id="searchButton">Execute Query</button>
-      </div>
-      <div class="result-container" id="resultContainer"></div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script defer src="scripts.js"></script>
+  <script>
+    function openModal() {
+      alert("Truth Engine modal will open here.");
+    }
+  </script>
 </body>
 </html>
