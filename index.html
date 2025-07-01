@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.5">
-  <title>ai-n • visionary tech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ai-n • Truth-as-a-Service</title>
+  <meta name="description" content="ai-n.org • Home of Truth-as-a-Service, micro-sites for justice, and ethical AI systems that remember.">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
     <header>
       <h1>ai-n.org</h1>
-      <p class="header-subtitle">visionary tech | poetic code | systems that remember</p>
+      <p class="header-subtitle">truth-as-a-service | micro-sites for justice | systems that remember</p>
     </header>
 
     <main>
-      <button class="search-button" onclick="openModal()">Access Truth Engine</button>
+      <button class="search-button" onclick="openModal()">🔍 Query the Truth Engine</button>
 
-      <section>
-        <h2>🧠 Core Philosophy</h2>
-        <p>We architect ethical AI systems that enhance human potential through:</p>
+      <section class="intro">
+        <h2>🌐 Welcome to ai-n.org</h2>
+        <p><strong>DNO</strong> and the ai-Nspired network invite you to explore <em>Truth-as-a-Service</em> — a platform where AI, ethics, and systems logic converge to protect truth and empower action.</p>
+        <p>This site anchors the movement — serving as the genesis of decentralized micro-sites, community dashboards, and living legal knowledge.</p>
+      </section>
+
+      <section class="highlight">
+        <h2>📡 What is Truth-as-a-Service?</h2>
+        <p>Truth-as-a-Service (TaaS) is a new civic utility: AI-assisted systems that clarify, verify, and amplify truth — across justice, community, media, and memory.</p>
+        <ul class="styled-list">
+          <li>🧠 Powered by contextual AI</li>
+          <li>📄 Anchored by case law, records, lived testimony</li>
+          <li>🔒 Cryptographically timestamped & verified</li>
+        </ul>
+      </section>
+
+      <section class="highlight">
+        <h2>🛰️ Micro-Sites = Decentralized Outreach</h2>
+        <p>Micro-sites are lightweight portals — designed to tell a story, solve a problem, or launch a movement. Each one is part of the greater ai-Nspired ecosystem.</p>
+        <ul class="styled-list">
+          <li>⚖️ Legal aid & case exposure</li>
+          <li>📢 Community action campaigns</li>
+          <li>📊 Data-backed claims & visualizations</li>
+        </ul>
+      </section>
+
+      <section class="highlight">
+        <h2>🔥 What is ai-Nspired?</h2>
+        <p>ai-Nspired is more than a platform — it's a philosophy of systems that serve. We build tools, agents, and frameworks that enhance human potential, powered by:</p>
         <ul class="styled-list">
           <li>Neural-Linguistic Programming</li>
           <li>Quantum Pattern Recognition</li>
@@ -29,7 +56,7 @@
     </main>
 
     <footer>
-      <p>© 2025 ai-n | Cryptographic Consensus</p>
+      <p>© 2025 ai-Nspired | Cryptographic Consensus | Built by DNO</p>
     </footer>
   </div>
 
@@ -37,23 +64,18 @@
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-container">
       <div class="modal-header">
-        <h2 class="modal-title">ai-N truth-engine</h2>
+        <h2 class="modal-title">ai-N Truth Engine</h2>
         <button class="close-modal" id="close-modal">×</button>
       </div>
-      
       <div class="search-container">
-        <input type="text" 
-               class="search-input" 
-               id="queryInput" 
-               placeholder="Query about justice, AI, or systems..."
-               aria-label="Truth Engine Search">
-        <button class="search-button" id="searchButton">execute query</button>
+        <input type="text" class="search-input" id="queryInput" placeholder="Ask about justice, systems, or law..." aria-label="Truth Engine Search" />
+        <button class="search-button" id="searchButton">Execute Query</button>
       </div>
-
       <div class="result-container" id="resultContainer"></div>
     </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="scripts.js"></script>
+  <script defer src="scripts.js"></script>
 </body>
 </html>
