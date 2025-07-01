@@ -99,3 +99,30 @@ async function performTruthQuery() {
     `;
   }
 }
+// 1. On page load, check for ?q=... and run a query if found
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+  if (q) {
+    openModal(q); // This fills input, opens modal, and runs the query
+  }
+});
+
+// 2. Intercept clicks on internal ?q=... links (including markdown links)
+document.body.addEventListener('click', function(event) {
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+
+  // Only handle links to this site with ?q=...
+  const url = new URL(link.href, window.location.origin);
+  const isSamePage = url.origin === window.location.origin && url.pathname === window.location.pathname;
+  const hasQuery = url.searchParams.has('q');
+  if (isSamePage && hasQuery) {
+    event.preventDefault();
+    const query = url.searchParams.get('q');
+    if (query) {
+      history.replaceState(null, '', url.search);
+      openModal(query); // This fills input, opens modal, and runs the query
+    }
+  }
+});
