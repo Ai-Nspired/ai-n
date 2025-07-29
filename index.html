@@ -21,7 +21,7 @@
         }
         .sky-map {
             width: 90vw;
-            height: 70vh; /* Adjusted height for title */
+            height: 70vh;
             max-width: 1000px;
             position: relative;
         }
@@ -43,6 +43,7 @@
             top: var(--y);
         }
         .star {
+            display: block;
             width: 10px;
             height: 10px;
             background: radial-gradient(circle, white, rgba(88, 166, 255, 0.7));
@@ -97,46 +98,35 @@
         <h1>ai-n.org</h1>
     </div>
     <div class="sky-map">
-    <!-- System 1: TOAIC -->
-    <div class="star-system" style="--x: 15%; --y: 25%;">
-            <a href="https://theofficialaicounsel.com" target="_blank" class="star"></a>        <div class="story-fragment">
-            <div class="story-fragment">Oversight in the Age of AI</div>            
-    </div>
-
-    <!-- System 2: UL -->
-    <div class="star-system" style="--x: 45%; --y: 40%;">
-        <a href="https://universal-laws.com" target="_blank" class="star"></a>
-        <div class="story-fragment">
-            <div class="story-fragment">Doctrine, Rewritten in Code<br>
+        <!-- TOAIC -->
+        <div class="star-system" style="--x: 15%; --y: 25%;">
+            <a href="https://theofficialaicounsel.com" target="_blank" class="star"></a>
+            <div class="story-fragment">Oversight in the Age of AI</div>
+            <div class="line" style="--length: 280; --angle: 35;"></div>
         </div>
-        <div class="line" style="--length: 200; --angle: 145;"></div>
-    </div>
-
-    <!-- System 3: TOAIU -->
-    <div class="star-system" style="--x: 30%; --y: 70%;">
-        <a href="https://theofficialaiuniversity.com" target="_blank" class="star"></a>
-        <div class="story-fragment">
+        <!-- UL -->
+        <div class="star-system" style="--x: 45%; --y: 40%;">
+            <a href="https://universal-laws.com" target="_blank" class="star"></a>
+            <div class="story-fragment">Doctrine, Rewritten in Code</div>
+            <div class="line" style="--length: 200; --angle: 145;"></div>
         </div>
-        <div class="line" style="--length: 250; --angle: -50;"></div>
-    </div>
-
-    <!-- System 4: CYBRJUSTICE -->
-    <div class="star-system" style="--x: 65%; --y: 60%;">
-        <a href="https://cybrjustice.com" target="_blank" class="star"></a>
-        <div class="story-fragment">
-            <div class="story-fragment">Legal Ghosts in the Machine<br>
+        <!-- TOAIU -->
+        <div class="star-system" style="--x: 30%; --y: 70%;">
+            <a href="https://theofficialaiuniversity.com" target="_blank" class="star"></a>
+            <div class="story-fragment">Instructionals for a Sentient Age</div>
+            <div class="line" style="--length: 250; --angle: -50;"></div>
         </div>
-        <div class="line" style="--length: 180; --angle: -135;"></div>
-
-    <!-- System 5: AI-NSPIRED -->
-    <div class="star-system" style="--x: 80%; --y: 20%;">
-        <a href="https://ai-nspired.com" target="_blank" class="star"></a>
-        <div class="story-fragment">
-            <div class="story-fragment">The Mythos of the Architect<br>
+        <!-- AI-NSPIRED -->
+        <div class="star-system" style="--x: 65%; --y: 60%;">
+            <a href="https://ai-nspired.com" target="_blank" class="star"></a>
+            <div class="story-fragment">The Mythos of the Architect</div>
+            <div class="line" style="--length: 180; --angle: -135;"></div>
         </div>
-    </div>
-</div>
-
+        <!-- TRUTH NETWORK / SPEAKEASY -->
+        <div class="star-system" style="--x: 80%; --y: 20%;">
+            <a href="/clue" class="star"></a>
+            <div class="story-fragment">Find the key to the Speakeasy<br>[?q=truth-network]</div>
+        </div>
     </div>
     <a href="truth-engine.html" class="nav-link">[ Access the Truth Engine ]</a>
 </body>
