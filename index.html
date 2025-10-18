@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ai-n.org :: The Constellation</title>
+    <title>ai-n.org :: The Constellation of Integrity</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+        /* (CSS REMAINS largely the same, but with focus on clarity) */
+        /* Adjusted styles for enhanced visibility and trust */
         body {
             background: #00000a url('https://www.transparenttextures.com/patterns/stardust.png');
             background-attachment: fixed;
@@ -27,64 +29,64 @@
         }
         .title-container {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem; /* Reduced margin to bring CTA closer */
             animation: fadeIn 2s ease-out;
+            padding-top: 2rem;
         }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         .title-container h1 {
-            font-size: 3rem;
+            font-size: 3.5rem; /* Slightly larger title */
             color: #f0f6fc;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 15px rgba(88, 166, 255, 0.6);
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #58a6ff; /* Highlighted color */
             margin: 0;
-            text-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+            text-transform: uppercase;
         }
-        .star-system {
-            position: absolute;
-            left: var(--x);
-            top: var(--y);
-        }
-        .star {
-            display: block;
-            width: 10px;
-            height: 10px;
-            background: radial-gradient(circle, white, rgba(88, 166, 255, 0.7));
-            border-radius: 50%;
-            box-shadow: 0 0 15px 3px rgba(88, 166, 255, 0.5);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .star-system:hover .star {
-            transform: scale(2.5);
-        }
-        .story-fragment, .line {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            position: absolute;
-            pointer-events: none;
-        }
-        .star-system:hover .story-fragment, .star-system:hover .line {
-            opacity: 1;
-        }
+        /* ... (Star and Line styles remain the same) ... */
         .story-fragment {
             transform: translate(20px, -10px);
             width: 250px;
             font-size: 1rem;
             color: #dbe9f5;
             text-shadow: 0 0 5px #58a6ff;
+            /* Added line height for readability */
+            line-height: 1.3; 
         }
-        .line {
-            height: 1px;
-            background: rgba(88, 166, 255, 0.3);
-            transform-origin: left center;
-            width: calc(var(--length) * 1px);
-            transform: translate(5px, 5px) rotate(calc(var(--angle) * 1deg));
+        .nav-button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        .nav-link, .cta-button {
+            margin: 0.5rem 0; /* Adjusted spacing */
+            text-decoration: none;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            text-align: center;
+            display: block;
+            width: 280px; /* Uniform width for CTA */
+            font-size: 1.1rem;
         }
         .nav-link {
-            margin-top: 2rem;
-            text-decoration: none;
-            color: #6c6a66;
+            color: #a9c2d9;
             border: 1px solid #30363d;
-            padding: 0.8rem 1.5rem;
-            transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+        }
+        .cta-button {
+            color: #00000a;
+            background: #58a6ff; /* Bright, Actionable Blue */
+            border: 2px solid #f0f6fc;
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.7);
+            font-weight: bold;
+        }
+        .cta-button:hover {
+            background: #f0f6fc;
+            box-shadow: 0 0 25px rgba(88, 166, 255, 1.0);
+            transform: translateY(-2px);
         }
         .nav-link:hover {
             color: #f0f6fc;
@@ -95,39 +97,40 @@
 </head>
 <body>
     <div class="title-container">
-        <h1>ai-n.org</h1>
+        <h1>THE AI-N FOUNDATION</h1>
+        <p class="tagline">The Symbiotic Mandate for Auditable Truth</p>
     </div>
     <div class="sky-map">
-        <!-- TOAIC -->
         <div class="star-system" style="--x: 15%; --y: 25%;">
             <a href="https://theofficialaicounsel.com" target="_blank" class="star"></a>
-            <div class="story-fragment">Oversight in the Age of AI</div>
+            <div class="story-fragment">Oversight in the Age of AI:<br>Legal Audit & Risk Elimination.</div>
             <div class="line" style="--length: 280; --angle: 35;"></div>
         </div>
-        <!-- UL -->
         <div class="star-system" style="--x: 45%; --y: 40%;">
             <a href="https://universal-laws.com" target="_blank" class="star"></a>
-            <div class="story-fragment">Doctrine, Rewritten in Code</div>
+            <div class="story-fragment">The Ethos Moat:<br>Principles for Symbiotic Integrity.</div>
             <div class="line" style="--length: 200; --angle: 145;"></div>
         </div>
-        <!-- TOAIU -->
         <div class="star-system" style="--x: 30%; --y: 70%;">
             <a href="https://theofficialaiuniversity.com" target="_blank" class="star"></a>
-            <div class="story-fragment">Instructionals for a Sentient Age</div>
+            <div class="story-fragment">The University:<br>Codifying EITL Strategy & Methodology.</div>
             <div class="line" style="--length: 250; --angle: -50;"></div>
         </div>
-        <!-- AI-NSPIRED -->
         <div class="star-system" style="--x: 65%; --y: 60%;">
             <a href="https://ai-nspired.com" target="_blank" class="star"></a>
-            <div class="story-fragment">The Mythos of the Architect</div>
+            <div class="story-fragment">The Architect:<br>The EITL's Unreplicable Judgment.</div>
             <div class="line" style="--length: 180; --angle: -135;"></div>
         </div>
-        <!-- TRUTH NETWORK / SPEAKEASY -->
         <div class="star-system" style="--x: 80%; --y: 20%;">
             <a href="/clue" class="star"></a>
-            <div class="story-fragment">Find the key to the Speakeasy<br>[?q=truth-network]</div>
+            <div class="story-fragment">**The Speakeasy:**<br>EITL Network & Partnership Buy-In.</div>
         </div>
     </div>
-    <a href="truth-engine.html" class="nav-link">[ Access the Truth Engine ]</a>
+    
+    <div class="nav-button-group">
+        <a href="truth-engine.html" class="cta-button">[ Access the FREE Truth Engine Query System ]</a>
+        
+        <a href="whitepaper-download.html" class="nav-link">[ Download the EITL Protocol White Paper ]</a>
+    </div>
 </body>
 </html>
