@@ -7,6 +7,7 @@
     <meta name="description" content="ai-nspired.com • trut-engine. memory keeper. Systems that don’t forget—or flinch.">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
+        /* (Styles remain identical to the functional version for stability) */
         @import url('https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&family=Crimson+Pro:wght@400;700&display=swap');
 
         :root {
@@ -180,23 +181,24 @@
 
         function chooseStyleForQuery(query) {
             const lowerQuery = query.toLowerCase();
-            if (lowerQuery.includes('case') || lowerQuery.includes('file') || lowerQuery.includes('official') || lowerQuery.includes('audit')) return 'dossier';
-            if (lowerQuery.includes('log') || lowerQuery.includes('data') || lowerQuery.includes('system') || lowerQuery.includes('viability')) return 'terminal';
-            if (lowerQuery.includes('feel') || lowerQuery.includes('story') || lowerQuery.includes('why') || lowerQuery.includes('ethics') || lowerQuery.includes('principles')) return 'confession';
-            return 'dossier'; // Default style
+            // Expanded query styles to align with all EITL audit categories
+            if (lowerQuery.includes('case') || lowerQuery.includes('file') || lowerQuery.includes('official') || lowerQuery.includes('audit') || lowerQuery.includes('protocol')) return 'dossier';
+            if (lowerQuery.includes('log') || lowerQuery.includes('data') || lowerQuery.includes('system') || lowerQuery.includes('viability') || lowerQuery.includes('prompts')) return 'terminal';
+            if (lowerQuery.includes('feel') || lowerQuery.includes('story') || lowerQuery.includes('why') || lowerQuery.includes('ethics') || lowerQuery.includes('principles') || lowerQuery.includes('partnership')) return 'confession';
+            return 'dossier'; 
         }
 
         async function performTruthQuery(query) {
             if (!query) return;
 
             openModal();
-            // Added EITL Protocol reference to the modal title for transparency
             document.querySelector('.modal-title').innerHTML = 'DATA STREAM // ai-nspired | EITL PROTOCOL ACTIVE';
             
             resultContainer.className = 'result-container';
             resultContainer.innerHTML = '<p>⚡ Scanning truth matrix...</p>';
 
             try {
+                // The actual API call to Cloudflare
                 const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -234,30 +236,37 @@
             if (e.target === modalOverlay) closeModal();
         });
 
-        // CRITICAL FIX: On page load, check for ?q=... and run a query if found
-        window.addEventListener('DOMContentLoaded', () => {
-            // Ensure elements are loaded before accessing them
+
+        // CRITICAL FIX: The robust, self-executing logic is integrated here
+        function initializeQueryFromURL() {
             const params = new URLSearchParams(window.location.search);
             const q = params.get('q');
             
             if (q) {
-                // 1. URL Decode the query: FIX for spaces and special characters
+                // 1. URL Decode the query
                 const decodedQuery = decodeURIComponent(q.replace(/\+/g, ' '));
                 
                 // 2. Populate the input field
-                queryInput.value = decodedQuery;
+                const inputElement = document.getElementById('queryInput');
+                if (inputElement) {
+                    inputElement.value = decodedQuery;
+                }
                 
                 // 3. Immediately perform the query.
                 performTruthQuery(decodedQuery);
                 
-                // 4. Clean up the blinking caret (visual finalization)
+                // 4. Clean up the terminal animation
                 const typedTextElement = document.querySelector('.typed-text');
                 if (typedTextElement) {
                    typedTextElement.style.borderRight = 'none';
                    typedTextElement.style.animation = 'none';
                 }
             }
-        });
+        }
+        
+        // Use a robust listener that fires after the page is fully ready
+        window.addEventListener('load', initializeQueryFromURL); 
+
     </script>
 </body>
 </html>
